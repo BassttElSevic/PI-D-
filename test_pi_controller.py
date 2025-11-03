@@ -139,5 +139,6 @@ def run_all_tests():
         return False
 
 if __name__ == "__main__":
+    import sys
     success = run_all_tests()
-    exit(0 if success else 1)
+    sys.exit(0 if success else 1)

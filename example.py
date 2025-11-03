@@ -153,9 +153,20 @@ def demonstrate_setpoint_change():
 
 if __name__ == "__main__":
     # 运行所有示例
-    simulate_temperature_control()
-    simulate_speed_control()
-    demonstrate_setpoint_change()
+    try:
+        simulate_temperature_control()
+    except Exception as e:
+        print(f"\n错误: 温度控制示例失败 - {e}")
+    
+    try:
+        simulate_speed_control()
+    except Exception as e:
+        print(f"\n错误: 速度控制示例失败 - {e}")
+    
+    try:
+        demonstrate_setpoint_change()
+    except Exception as e:
+        print(f"\n错误: 设定值变化示例失败 - {e}")
     
     print("\n" + "=" * 60)
     print("所有示例运行完成！")

@@ -37,7 +37,6 @@ class PIController:
         
         # 内部状态
         self._integral = 0  # 积分累积值
-        self._last_time = None  # 上次更新时间
     
     def reset(self):
         """
@@ -45,7 +44,6 @@ class PIController:
         Reset controller state
         """
         self._integral = 0
-        self._last_time = None
     
     def update(self, measured_value, dt=None):
         """
